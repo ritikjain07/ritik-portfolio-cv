@@ -12,9 +12,8 @@ function About() {
       <div className="text-center ">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  mb-4">
           Hello, I'm{" "}
-          <span className="text-purple-500 bg-clip-text text-transparent">
-            Ritik Jain .
-          </span>
+          <span className="text-black bg-amber-500 ">Ritik Jain</span>
+          <span> .</span>
         </h1>
         <p className="text-base md:text-lg lg:text-xl ClashDisplay-Medium text-gray-300 max-w-3xl mx-auto leading-relaxed">
           Passionate Full Stack Developer dedicated to building impactful
