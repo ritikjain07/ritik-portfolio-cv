@@ -60,12 +60,7 @@ function About() {
 
       {/* Buttons Section */}
       <div className="flex flex-wrap justify-center gap-6">
-        {/* <a
-          href="#contact"
-          className="bg-gradient-to-r from-pink-500 to-purple-500 text-lg font-medium px-6 py-3 rounded-lg shadow-md hover:scale-105 transition-transform text-white"
-        >
-          Contact Me
-        </a> */}
+
         <a
           href="https://drive.google.com/file/d/1ZYWySAmJSLiHvTFK9TZEo4_MqwJhuEMF/view?usp=sharing"
           className="bg-gradient-to-r from-green-500 to-blue-500 text-lg font-medium px-6 py-3 rounded-lg shadow-md hover:scale-105 transition-transform text-white"
