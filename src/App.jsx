@@ -16,7 +16,7 @@ function App() {
 
   return (
     <ReactLenis root>
-      <div className="bg-[#0a0908]  select-none text-[#f6cba3] text-[25vh] w-full h-full min-h-screen">
+      <div className="bg-[#080825]  select-none text-[#f6cba3] text-[25vh] w-full h-full min-h-screen">
         <Router />
       </div>
     </ReactLenis>

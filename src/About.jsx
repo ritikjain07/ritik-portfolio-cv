@@ -7,7 +7,7 @@ function About() {
       initial={{ y: 1000, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.8, ease: "circInOut" }}
-      className=" w-screen h-screen flex flex-col justify-center items-center gap-5 bg-gradient-to-r bg-[#0d0d3b] "
+      className=" w-screen h-screen flex flex-col justify-center items-center gap-5 bg-gradient-to-r bg-[#080825] "
     >
       <div className="text-center ">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  mb-4">
