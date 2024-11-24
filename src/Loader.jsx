@@ -6,33 +6,18 @@ import { Howl } from "howler";
 
 // Import video files
 const videoSources = [
-  "./video0.mp4",
-  "./video1.mp4",
-  "./video2.mp4",
+  "./ninjaFoodmp4.mp4",
+  "./brahmamp4.mp4",
+  "./Finovamp4.mp4",
   // Add more videos here
 ];
 
 function Loader() {
   const [RenderPage, setRenderPage] = useState(false);
   const [showLoader, setShowLoader] = useState(true);
-  const boomAudioSrc = "./boom-208750.mp3";
-  const interfaceAudioSrc = "./interface.mp3";
-  const loadingAudioSrc = "./Loading.mp3";
 
   useEffect(() => {
     // Function to preload audio files
-    const preloadAudio = (src) => {
-      return new Promise((resolve) => {
-        const sound = new Howl({
-          src: [src],
-          html5: true,
-          volume: 0.5,
-          onload: () => resolve(),
-          onloaderror: () => resolve(), // Handle error case
-        });
-        sound.load();
-      });
-    };
 
     // Function to preload video files
     const preloadVideo = (src) => {
@@ -48,9 +33,6 @@ function Loader() {
     // Load all assets
     const loadAssets = async () => {
       await Promise.all([
-        preloadAudio(boomAudioSrc),
-        preloadAudio(interfaceAudioSrc),
-        preloadAudio(loadingAudioSrc),
         ...videoSources.map(preloadVideo), // Preload videos
       ]);
       setTimeout(() => {
@@ -61,11 +43,6 @@ function Loader() {
     };
 
     loadAssets();
-    new Howl({
-      src: ["Loading.mp3"],
-      loop: false,
-      volume: 0.5,
-    }).play();
   }, []);
 
   return (

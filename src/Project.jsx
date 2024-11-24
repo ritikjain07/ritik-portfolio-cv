@@ -8,7 +8,7 @@ function Project() {
       ProjectName: "Brahma Disaster Management System",
       Description:
         "Developed a comprehensive web application designed to streamline disaster management operations. Built using HTML, CSS, JavaScript, GSAP, and Tailwind CSS, the application includes features like interactive mind mapping and SCAMPER exercises, with engaging animations powered by GSAP. Tailwind CSS ensures a responsive and modern UI, while JavaScript facilitates smooth and seamless user interactions. This project demonstrates expertise in front-end technologies and creating impactful, user-friendly, and visually appealing web applications.",
-      DemoLink: "https://group3cts.vercel.app/",
+      
       CodeLink: "https://github.com/ritikjain07/Brahma-Disaster-Management-System",
       CustomClass: "md:w-[40%] lg:w-[40%] w-full text-center md:text-end",
       CustomClassHeader:
@@ -21,7 +21,7 @@ function Project() {
       ProjectName: "Finova",
       Description:
         "Finova is an upcoming finance management system designed to provide secure, easy-to-use tools for managing multiple bank accounts, tracking transactions, and transferring funds. Currently in development, Finova integrates with industry-leading financial APIs like Plaid for account linking and Dwolla for secure fund transfers.",
-      DemoLink: "https://bubble-game-three-iota.vercel.app/main.html",
+      
       CodeLink: "https://github.com/ritikjain07/Finova-Banking",
       CustomClass: "md:w-[40%] w-full text-center",
       CustomClassHeader:
@@ -34,12 +34,11 @@ function Project() {
       ProjectName: "Ninja Food",
       Description:
         "Ninja Food is a responsive web application designed to simplify the food ordering experience. It combines intuitive design with powerful backend features, making it ideal for users and businesses alike. With Ninja Food, users can browse a vibrant gallery of dishes, place orders, and manage their accounts seamlessly.",
-      DemoLink: "https://manage-income-exp-mmbd.vercel.app/User",
       CodeLink: "https://github.com/ritikjain07/ninja-food",
       CustomClass: "md:w-[40%] w-full text-center",
       CustomClassHeader:
         "border-white/50 text-center md:text-end flex items-center ",
-      Video: "../public/ninjaFoodmp4.mp4",
+      Video: "./ninjaFoodmp4.mp4",
       ButtonClass:
         "md:justify-center sm:justify-center justify-center items-center",
     },

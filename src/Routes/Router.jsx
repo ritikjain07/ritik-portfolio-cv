@@ -15,7 +15,7 @@ function Router() {
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
-    playSound(); // Ensure `playSound` is defined or passed as a prop
+   
   };
 
   return (
