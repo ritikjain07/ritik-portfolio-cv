@@ -15,29 +15,8 @@ function Menu1({ change }) {
     { Navlink: "/AboutMe", Header: "About Me" },
   ];
 
-  let sound, click;
-
-  React.useEffect(() => {
-    sound = new Howl({
-      src: ["whoosh-cinematic.mp3"],
-      loop: false,
-      volume: 0.5,
-    });
-    click = new Howl({
-      src: ["interface.mp3"],
-      loop: false,
-      volume: 0.5,
-    });
-
-    return () => {
-      sound.unload();
-      click.unload();
-    };
-  }, []);
-
   const handleMenuClick = (navlink) => {
     change(false);
-    sound.play();
   };
 
   return (
@@ -85,7 +64,6 @@ function Menu1({ change }) {
               download={true}
               className="relative inline-block px-6 py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg transition-all duration-300 hover:from-purple-500 hover:to-blue-500 hover:scale-105"
             >
-              <span className="absolute inset-0 bg-white opacity-0 rounded-full transition-opacity duration-300 hover:opacity-20"></span>
               Download CV
             </a>
           </motion.span>

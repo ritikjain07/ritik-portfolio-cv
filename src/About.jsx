@@ -27,7 +27,7 @@ function About() {
 
       {/* Project Highlights Section */}
       <div className="w-full max-w-4xl text-center ">
-        <h2 className="text-3xl  ClashDisplay-bold pb-4 text-purple-500 bg-clip-text text-transparent">
+        <h2 className="text-3xl  ClashDisplay-bold pb-4 text-purple-500 ">
           Project Highlights
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-t-2 pt-5 border-white/20 ">
