@@ -32,7 +32,7 @@ A responsive and modern portfolio showcasing my skills, projects, and experience
 ## 📬 Contact
 
 - **Email**: [ritikjain4560@gmail.com](mailto:ritikjain4560@gmail.com)  
-- **GitHub**: [Your GitHub Profile](https://github.com/ritikjain07)  
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/ritik-jain-77a863225/)
+- **GitHub**: [GitHub Profile](https://github.com/ritikjain07)  
+- **LinkedIn**: [LinkedIn Profile](https://linkedin.com/in/ritik-jain-77a863225/)
 
 ---
