@@ -3,70 +3,91 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import { FaCss3 } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { GiSteamLocomotive } from "react-icons/gi";
-import { SiGreensock } from "react-icons/si";
-import { PiFramerLogo } from "react-icons/pi";
+import { SiMysql } from "react-icons/si";
+import { SiMongodb, SiNodedotjs, SiExpress } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
 
 function Marquee() {
   const Tech = useRef(null);
   const [Techwidth, setTechStack] = useState(0);
 
   const techStackItems = [
-    { component: <FaHtml5 className="w-[13vw] sm:w-[10vw]" />, key: "html5" },
-    { component: <FaCss3 className="w-[13vw] sm:w-[10vw]" />, key: "css3" },
-    { component: <FaJs className="w-[13vw] sm:w-[10vw]" />, key: "js" },
-    { component: <FaReact className="w-[13vw] sm:w-[10vw]" />, key: "react" },
     {
-      component: <RiTailwindCssFill className="w-[13vw] sm:w-[10vw]" />,
+      component: <FaHtml5 className="w-[13vw] sm:w-[10vw] text-orange-800" />,
+      key: "html5",
+    },
+    {
+      component: <FaCss3 className="w-[13vw] sm:w-[10vw] text-blue-600" />,
+      key: "css3",
+    },
+    {
+      component: <FaJs className="w-[13vw] sm:w-[10vw] text-yellow-500" />,
+      key: "js",
+    },
+    {
+      component: <FaReact className="w-[13vw] sm:w-[10vw] text-[#61DBFB] " />,
+      key: "react",
+    },
+    {
+      component: (
+        <RiTailwindCssFill className="w-[13vw] sm:w-[10vw]  text-blue-200" />
+      ),
       key: "tailwind",
     },
     {
-      component: <GiSteamLocomotive className="w-[13vw] sm:w-[10vw]" />,
-      key: "locomotive",
+      component: <SiMongodb className="w-[10vw] sm:w-[8vw] text-green-600" />,
+      key: "mongodb2",
     },
     {
-      component: <SiGreensock className="w-[13vw] sm:w-[10vw]" />,
-      key: "greensock",
+      component: <SiMysql className="w-[10vw] sm:w-[8vw] text-blue-600" />,
+      key: "mysql2",
+    },
+    {
+      component: <SiNodedotjs className="w-[10vw] sm:w-[8vw] text-green-800" />,
+      key: "SiNodedotjs2nodot",
+    },
+    {
+      component: <SiExpress className="w-[10vw] sm:w-[8vw] text-slate-800" />,
+      key: "mysql2",
+    },
+
+    {
+      component: <FaHtml5 className="w-[10vw] sm:w-[8vw] text-orange-800" />,
+      key: "html51",
+    },
+    {
+      component: <FaCss3 className="w-[10vw] sm:w-[8vw] text-blue-600" />,
+      key: "css32",
+    },
+    {
+      component: <FaJs className="w-[10vw] sm:w-[8vw] text-yellow-500 " />,
+      key: "js2",
+    },
+    {
+      component: <FaReact className="w-[10vw] sm:w-[8vw] text-[#61DBFB]" />,
+      key: "reac2t",
     },
     {
       component: (
-        <img
-          className="w-[13vw] sm:w-[10vw]"
-          src="/lenis svg.svg"
-          alt="Lenis"
-        />
+        <RiTailwindCssFill className="w-[10vw] sm:w-[8vw] text-blue-200" />
       ),
-      key: "lenis",
-    },
-    {
-      component: <PiFramerLogo className="w-[10vw] sm:w-[8vw]" />,
-      key: "Framers",
-    },
-    { component: <FaHtml5 className="w-[10vw] sm:w-[8vw]" />, key: "html51" },
-    { component: <FaCss3 className="w-[10vw] sm:w-[8vw]" />, key: "css32" },
-    { component: <FaJs className="w-[10vw] sm:w-[8vw]" />, key: "js2" },
-    { component: <FaReact className="w-[10vw] sm:w-[8vw]" />, key: "reac2t" },
-    {
-      component: <RiTailwindCssFill className="w-[10vw] sm:w-[8vw]" />,
       key: "tailwind2",
     },
     {
-      component: <GiSteamLocomotive className="w-[10vw] sm:w-[8vw]" />,
-      key: "locomotive2",
+      component: <SiMongodb className="w-[10vw] sm:w-[8vw] text-green-600" />,
+      key: "mongodb2",
     },
     {
-      component: <SiGreensock className="w-[10vw] sm:w-[8vw]" />,
-      key: "greensock2",
+      component: <SiMysql className="w-[10vw] sm:w-[8vw] text-blue-600" />,
+      key: "mysql2",
     },
     {
-      component: (
-        <img className="w-[10vw] sm:w-[8vw]" src="/lenis svg.svg" alt="Lenis" />
-      ),
-      key: "lenis2",
+      component: <SiNodedotjs className="w-[10vw] sm:w-[8vw] text-green-800" />,
+      key: "SiNodedotjs2nodot",
     },
     {
-      component: <PiFramerLogo className="w-[10vw] sm:w-[8vw]" />,
-      key: "Framers2",
+      component: <SiExpress className="w-[10vw] sm:w-[8vw] text-slate-800" />,
+      key: "mysql2",
     },
   ];
 

@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Project from "../Project";
 import About from "../About";
+// import Resume from "../Resume"; // Ensure Resume is defined
 import Menu1 from "../Menu1";
 import Loader from "../Loader";
 import { LiaGripLinesSolid, LiaTimesSolid } from "react-icons/lia";
@@ -10,25 +11,28 @@ import OtherageTrantion from "../Framer Motion Effect/OtherageTrantion";
 
 function Router() {
   const location = useLocation();
-  const [Menu, setMenu] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+    playSound(); // Ensure `playSound` is defined or passed as a prop
+  };
 
   return (
     <div>
       {/* Menu Toggle */}
       <AnimatePresence>
-        {!Menu ? (
+        {!menuOpen ? (
           <motion.span
             key="menu-icon"
-            onClick={() => {
-              setMenu(true);
-              playSound();
-            }}
-            className="magnet-target absolute top-4 z-[800] right-8"
+            onClick={toggleMenu}
+            className="magnet-target absolute top-4 z-[800] flex gap-2 right-8"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
           >
+            <span className="text-2xl">Click Me</span>
             <LiaGripLinesSolid className="w-10 h-10" />
           </motion.span>
         ) : (
@@ -41,13 +45,10 @@ function Router() {
             transition={{ duration: 0.5 }}
           >
             <LiaTimesSolid
-              onClick={() => {
-                setMenu(false);
-                playSound();
-              }}
-              className="absolute top-4 right-8 w-10 z-[990]  h-10 text-white"
+              onClick={toggleMenu}
+              className="absolute top-4 right-8 w-10 z-[990] h-10 text-white"
             />
-            <Menu1 change={setMenu} />
+            <Menu1 change={setMenuOpen} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -57,13 +58,8 @@ function Router() {
         <Routes location={location} key={location.pathname}>
           <Route
             path="/"
-            element={
-              <>
-                <Loader />
-              </>
-            }
+            element={<Loader />}
           />
-
           <Route
             path="/AboutMe"
             element={
@@ -82,7 +78,7 @@ function Router() {
               </>
             }
           />
-          <Route path="" />
+        
         </Routes>
       </AnimatePresence>
     </div>

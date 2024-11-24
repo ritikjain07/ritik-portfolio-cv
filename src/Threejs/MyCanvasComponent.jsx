@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, ContactShadows } from "@react-three/drei";
-import { Bloom, EffectComposer } from "@react-three/postprocessing";
+import { Bloom, EffectComposer ,DepthOfField } from "@react-three/postprocessing";
 
 const Mesh = React.lazy(() => import("./Mesh"));
 
@@ -20,6 +20,9 @@ function MyCanvasComponent() {
       </Suspense>
       <EffectComposer>
         <Bloom intensity={1} />
+        <ContactShadows />
+        {/* <Outline /> */}
+        <DepthOfField focusDistance={1} focalLength={0.05} />
       </EffectComposer>
       <OrbitControls
         enablePan={true}
