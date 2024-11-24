@@ -18,7 +18,7 @@ A responsive and modern portfolio showcasing my skills, projects, and experience
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/ritikjain07/portfolio-website.git
+   git clone https://github.com/ritikjain07ritik-portfolio-cv.git
    ```
 2. Install dependencies:  
    ```bash
